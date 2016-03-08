@@ -5,6 +5,11 @@ public class main {
 		// TODO Auto-generated method stub
 
 		Roll dicesix = new Roll();
+		int total = dicesix.dicetotal;  
+		Rules dicetotal = new Rules();
+		dicetotal.penalty(total);
+		
+		
 	}
 
 }
