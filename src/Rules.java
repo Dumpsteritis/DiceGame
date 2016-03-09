@@ -1,6 +1,7 @@
+
 public class Rules
 {	
-	Roll dicetotal = new Roll();	
+	Roll roll = new Roll();	
 	
 	public int penalty(int total)
 	{
