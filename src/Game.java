@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Game extends Player {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	Roll roll = new Roll();
 
 	Scanner keyboard = new Scanner(System.in);
@@ -128,6 +129,8 @@ public class Game extends Player {
 		}
 	}
 =======
+=======
+>>>>>>> 0e9b84fe5bb65690bc1a74ce2e4744c75ece8679
     Roll roll = new Roll();
 
 
@@ -266,6 +269,9 @@ public class Game extends Player {
             playerNumber++;
         }
     }
+<<<<<<< HEAD
+>>>>>>> 0e9b84fe5bb65690bc1a74ce2e4744c75ece8679
+=======
 >>>>>>> 0e9b84fe5bb65690bc1a74ce2e4744c75ece8679
 
 
