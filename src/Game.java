@@ -52,7 +52,7 @@ public class Game extends Player
 	public void playerNumber()
 	{
 		playerNumber= (humanPlayerNumber+AIPlayerNumber);
-		for (int i=1; i<playerNumber.size(); i++);
+		for (int i=1; i<playerNumber; i++);
 	}
 	
 	public int drinkBeer() 

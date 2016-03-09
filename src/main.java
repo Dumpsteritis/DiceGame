@@ -5,9 +5,8 @@ public class main {
 	{
 		// TODO Auto-generated method stub
 
-		Roll roll = new Roll();
 		Game Start = new Game();
-		Rules penalty = new Rules();
+		Start.Start();
 		
 		
 		
