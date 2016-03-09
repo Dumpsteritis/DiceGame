@@ -1,4 +1,3 @@
-import java.util.*;
 
 public class main {
 
@@ -6,8 +5,11 @@ public class main {
 	{
 		// TODO Auto-generated method stub
 
-		Game start = new Game();
-		start.Start();
+		Roll roll = new Roll();
+		Game Start = new Game();
+		Rules penalty = new Rules();
+		
+		
 		
 	}
 

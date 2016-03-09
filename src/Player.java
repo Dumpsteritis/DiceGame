@@ -12,25 +12,23 @@ public class Player {
 		money = 100;
 		tolerance = 100;
 	}
-	
-	public int humanPlayerNumber (){
-		System.out.println("Enter the number of Human Players");
+	public int playerNumber (String message){
+		System.out.println(message);
 		System.out.println("> ");
-		Scanner playerInput = new Scanner(humanPlayerNumber);
+		Scanner playerInput = new Scanner(System.in);
+		humanPlayerNumber = playerInput.nextInt();
 		
 		return humanPlayerNumber;	
-			
-		}
+	}
+	public int humanPlayerNumber (){
+		return playerNumber("Enter number of Human Players");
+	}
 	public int AIPlayerNumber (){
-		System.out.println("Enter the number of AI Players");
-		System.out.println("> ");
-		Scanner playerInput = new Scanner(AIPlayerNumber);
-		
-		return AIPlayerNumber;		
+		return playerNumber("Enter number of AI Players");
 	}
 	public void playerNumber(){
 		playerNumber= (humanPlayerNumber+AIPlayerNumber);
-		for (int i=1; i<playerNumber.size(); i++){
+		for (int i=1; i<playerNumber; i++){
 			
 		}
 	}
