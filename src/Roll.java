@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.math.*;
 
-public class Roll
+public class Roll 
 {		
 	int number;
 			
@@ -17,5 +17,6 @@ public class Roll
 		System.out.print("You rolled a ");
 		System.out.print(sum);
 		return sum;
+		
 	}
 }

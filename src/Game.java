@@ -69,8 +69,10 @@ public class Game extends Player {
 		go = keyboard.nextLine();
 
 		if (go.equalsIgnoreCase("Yes")) {
-			roll.roll();
-		} else {
+			
+			Rules rules = new Rules();
+			rules.penalty(roll.roll());
+			
 			System.out.println("Unless you type in 'Yes', we're not going anywhere.");
 		}
 	}
@@ -125,23 +127,5 @@ public class Game extends Player {
 		}
 	}
 
-	public int penalty(int total) {
-		int sum = 0;
-		int penalty = 0;
 
-		if (sum <= 10) {
-			penalty = 1;
-		} else if (sum <= 20) {
-			penalty = 2;
-		} else if (sum <= 30) {
-			penalty = 3;
-		} else if (sum <= 40) {
-			penalty = 4;
-		} else if (sum <= 50) {
-			penalty = 5;
-		} else if (sum <= 60) {
-			penalty = 6;
-		}
-		return penalty;
-	}
 }

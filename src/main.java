@@ -6,11 +6,13 @@ public class main {
 		// TODO Auto-generated method stub
 
 		Game Start = new Game();
+		
 		Start.Explanation();
 		Start.humanPlayerNumber();
 		Start.AIPlayerNumber();
 		Start.SumofPlayers();
 		Start.Start();
+	
 		
 		
 		
