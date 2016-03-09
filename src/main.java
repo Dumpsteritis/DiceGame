@@ -12,6 +12,8 @@ public class main {
 		Start.AIPlayerNumber();
 		Start.SumofPlayers();
 		Start.Start();
+	
+		
 		
 		
 		
