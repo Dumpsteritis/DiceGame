@@ -15,7 +15,8 @@ public class Player {
 	public int playerNumber (String message){
 		System.out.println(message);
 		System.out.println("> ");
-		Scanner playerInput = new Scanner(playerNumber);
+		Scanner playerInput = new Scanner(System.in);
+		humanPlayerNumber = playerInput.nextInt();
 		
 		return humanPlayerNumber;	
 	}
@@ -27,7 +28,7 @@ public class Player {
 	}
 	public void playerNumber(){
 		playerNumber= (humanPlayerNumber+AIPlayerNumber);
-		for (int i=1; i<playerNumber.size(); i++){
+		for (int i=1; i<playerNumber; i++){
 			
 		}
 	}
