@@ -71,13 +71,13 @@ public class Game extends Player {
 		if (go.equalsIgnoreCase("Yes")) {
 			roll.roll();
 		} else {
-			System.out.println("Unless you type in 'Yes', we're not going anywhere.");
+			System.out.println("Unless you type in 'Yes', we're not going anywhere. Please restart this game");
 		}
 	}
 
 	public int drinkBeer() {
 		tolerance -= 8;
-		System.out.println("you drank a beer, and lost 8 Tolerance");
+		System.out.println("You drank a beer, and lost 8 Tolerance");
 		System.out.println("Remaining Tolerance: " + tolerance);
 		System.out.println("Remaining Money: " + money );
 		return tolerance;
@@ -85,14 +85,14 @@ public class Game extends Player {
 
 	public int drinkShot() {
 		tolerance -= 10;
-		System.out.println("you took a shot, and lost 10 Tolerance");
+		System.out.println("You took a shot, and lost 10 Tolerance");
 		System.out.println("Remaining Tolerance: " + tolerance);
 		System.out.println("Remaining Money: " + money );
 		return tolerance;}
 
 	public int buyBeer() {
 		money -= 4;
-		System.out.println("you bought a beer, and lost 4 Money");
+		System.out.println("You bought a beer, and lost 4 Money");
 		System.out.println("Remaining Money: " + money );
 		System.out.println("Remaining Tolerance: " + tolerance);
 		return money;
@@ -100,7 +100,7 @@ public class Game extends Player {
 
 	public int buyShot() {
 		money -= 5;
-		System.out.println("you bought a shot, and lost 5 Money");
+		System.out.println("You bought a shot, and lost 5 Money");
 		System.out.println("Remaining Money: " + money);
 		System.out.println("Remaining Tolerance: " + tolerance);
 		return money;

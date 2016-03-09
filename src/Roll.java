@@ -7,6 +7,7 @@ public class Roll
 			
 	public int roll()
 	{
+		
 		int dice1=(int)(Math.random()*4+1);
 		int dice2=(int)(Math.random()*6+1);
 		int dice3=(int)(Math.random()*8+1);
