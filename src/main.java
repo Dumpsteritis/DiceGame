@@ -1,13 +1,14 @@
 
 public class main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		// TODO Auto-generated method stub
 
-		Roll dicesix = new Roll();
-		int total = dicesix.dicetotal;  
-		Rules dicetotal = new Rules();
-		dicetotal.penalty(total);
+		Roll roll = new Roll();
+		Game Start = new Game();
+		Rules penalty = new Rules();
+		
 		
 		
 	}

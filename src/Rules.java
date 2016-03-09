@@ -1,7 +1,6 @@
-public class Rules extends Game
+public class Rules
 {	
-	Roll dicetotal = new Roll();
-	int total = dicetotal.dicetotal;  
+	Roll dicetotal = new Roll();	
 	
 	public int penalty(int total)
 	{
@@ -35,22 +34,4 @@ public class Rules extends Game
 		return penalty;
 	}
 	
-	public void lose()
-	{
-		int money = 0;
-		int tolerance = 0;
-		
-		if (money + tolerance < 20)
-		{
-			System.out.println("You've spent and drank too much. You lose! Good luck explaining your conition to your wife!");
-		}
-		else if (money <= 3)
-		{
-			System.out.println("You can't afford to buy another drink. You lose!");
-		}
-		else if (tolerance <= 7)
-		{
-			System.out.println("You've drank too much. You lose!");
-		}
-	}
 }
