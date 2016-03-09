@@ -72,8 +72,8 @@ public class Game extends Player {
 			
 			Rules rules = new Rules();
 			rules.penalty(roll.roll());
-			
-			System.out.println("Unless you type in 'Yes', we're not going anywhere.");
+		} else {
+			System.out.println("Unless you type in 'Yes', we're not going anywhere. Please restart this game");
 		}
 	}
 
