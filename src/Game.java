@@ -10,11 +10,64 @@ public class Game extends Player
 	int humanPlayerNumber;
 	int AIPlayerNumber;
 	boolean loseGame=false;
+	int playersum;
+
+	public void Explanation ()
+	{
+		System.out.println("Welcome to the drinking game!");
+		System.out.println("Each player starts with 100 points");
+		System.out.println("Each dice roll determines how points are deducted from the players total");
+		System.out.println("Points can be deducted based on how many drinks the player has drank or purchased");
+		System.out.println("Drinking a shot deducts 10 points from the players total");
+		System.out.println("Drinking a beer deducts 8 points from the players total");
+		System.out.println("Buying a shot deducts 5 points from the players total");
+		System.out.println("Buying a beer deducts 4 points from the players total");
+		System.out.println("Any player who has less than 20 points loses");
+		System.out.println("The last player who has 20 or more points wins!");
+	}
 	
+	
+	public int humanPlayerNumber ()
+	{
+		System.out.println("Enter the number of Human Players");
+		System.out.print("> ");
+		Scanner playerInput = new Scanner(System.in);
+		humanPlayerNumber = playerInput.nextInt();
+		
+		return humanPlayerNumber;			
+	}
+	
+	public int AIPlayerNumber ()
+	{
+		System.out.println("Enter the number of AI Players");
+		System.out.print("> ");
+		Scanner playerInput = new Scanner(System.in);
+		AIPlayerNumber = playerInput.nextInt();
+		
+		return AIPlayerNumber;	
+	}
+	
+	public int SumofPlayers ()
+	{
+		int playersum;
+		playersum = (humanPlayerNumber + AIPlayerNumber);
+		System.out.println("Number of total players is: ");
+		System.out.print("> ");
+		System.out.print(playersum);
+		return playersum;	
+	}
+	
+	public void playerNumber()
+	{
+		playerNumber= (humanPlayerNumber+AIPlayerNumber);
+		for (int i=1; i<playerNumber; i++);
+	}
+
 	public void Start()
 	{
 		String go;
 		
+		System.out.println(" ");
 		System.out.println("Ready to roll the dice? (Yes/No)");
 		System.out.print("> ");
 		go = keyboard.nextLine();
@@ -26,34 +79,8 @@ public class Game extends Player
 		else
 		{
 			System.out.println("Unless you type in 'Yes', we're not going anywhere.");
-		}
-	}
-	
-	public int humanPlayerNumber ()
-	{
-		System.out.println("Enter the number of Human Players");
-		System.out.println("> ");
-		Scanner playerInput = new Scanner(System.in);
-		humanPlayerNumber = playerInput.nextInt();
-		
-		return humanPlayerNumber;			
-	}
-	
-	public int AIPlayerNumber ()
-	{
-		System.out.println("Enter the number of AI Players");
-		System.out.println("> ");
-		Scanner playerInput = new Scanner(System.in);
-		AIPlayerNumber = playerInput.nextInt();
-		
-		return AIPlayerNumber;		
-	}
-	
-	public void playerNumber()
-	{
-		playerNumber= (humanPlayerNumber+AIPlayerNumber);
-		for (int i=1; i<playerNumber; i++);
-	}
+		}			
+	}	
 	
 	public int drinkBeer() 
 	{
@@ -104,5 +131,37 @@ public class Game extends Player
 		{
 			playerNumber++;		
 		}
+	}
+	
+	public int penalty(int total)
+	{
+		int dicetotal = 0;
+		int penalty = 0;
+		
+		if (dicetotal <= 10)
+		{
+			penalty = 1;
+		}
+		else if (dicetotal <=20)
+		{
+			penalty = 2;
+		}
+		else if (dicetotal <=30)
+		{
+			penalty = 3;
+		}
+		else if (dicetotal <=40)
+		{
+			penalty = 4;
+		}
+		else if (dicetotal <=50)
+		{
+			penalty = 5;
+		}
+		else if (dicetotal <=60)
+		{
+			penalty = 6;
+		}		
+		return penalty;
 	}
 }
