@@ -58,8 +58,10 @@ public class Game extends Player {
     public void playerNumber() {
         playerNumber = (humanPlayerNumber + AIPlayerNumber);
         for (int i = 1; i < playerNumber; i++)
-            ;
-    }
+        {
+        	System.out.println("iiiiiii");
+        }
+      }
 
     public void Start() {
         String go;
