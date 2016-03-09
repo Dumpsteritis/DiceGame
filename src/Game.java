@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Game extends Player {
     Roll roll = new Roll();
 
+
     Scanner keyboard = new Scanner(System.in);
 
     int playerNumber;
@@ -70,40 +71,52 @@ public class Game extends Player {
 
         if (go.equalsIgnoreCase("Yes")) {
             
+
+        } else {
+            System.out.println
+            ("Unless you type in 'Yes', we're not going anywhere. Please restart this game");
+        }
             Rules rules = new Rules();
             rules.penalty(roll.roll());
-        } else {
-            System.out.println("Unless you type in 'Yes', we're not going anywhere. Please restart this game");
-        }
-    }
 
+       }
+    
+    
     public int drinkBeer() {
         tolerance -= 8;
-        System.out.println("you drank a beer, and lost 8 Tolerance");
+        System.out.println("You also drank a beer and lost 8 Tolerance");
+        System.out.print("> ");
         System.out.println("Remaining Tolerance: " + tolerance);
+        System.out.print("> ");
         System.out.println("Remaining Money: " + money );
         return tolerance;
     }
 
     public int drinkShot() {
         tolerance -= 10;
-        System.out.println("you took a shot, and lost 10 Tolerance");
+        System.out.println("You also took a shot and lost 10 Tolerance");
+        System.out.print("> ");
         System.out.println("Remaining Tolerance: " + tolerance);
+        System.out.print("> ");
         System.out.println("Remaining Money: " + money );
         return tolerance;}
 
     public int buyBeer() {
         money -= 4;
-        System.out.println("you bought a beer, and lost 4 Money");
+        System.out.println("You also bought a beer and lost 4 Money");
+        System.out.print("> ");
         System.out.println("Remaining Money: " + money );
+        System.out.print("> ");
         System.out.println("Remaining Tolerance: " + tolerance);
         return money;
     }
 
     public int buyShot() {
         money -= 5;
-        System.out.println("you bought a shot, and lost 5 Money");
+        System.out.println("You also bought a shot and lost 5 Money");
+        System.out.print("> ");
         System.out.println("Remaining Money: " + money);
+        System.out.print("> ");
         System.out.println("Remaining Tolerance: " + tolerance);
         return money;
     }

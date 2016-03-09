@@ -2,9 +2,7 @@ import java.util.Random;
 import java.math.*;
 
 public class Roll 
-{		
-	int number;
-			
+{					
 	public int roll()
 	{
 		
@@ -16,7 +14,7 @@ public class Roll
 		int dice6=(int)(Math.random()*20+1);
 		int sum= dice1 + dice2 + dice3 + dice4 + dice5 + dice6;
 		System.out.print("You rolled a ");
-		System.out.print(sum);
+		System.out.println(sum);
 		return sum;
 		
 	}
