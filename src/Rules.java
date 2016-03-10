@@ -1,13 +1,14 @@
 
 public class Rules extends Game
 {    
-    Roll roll = new Roll();    
- 
-    int penaltysum;
-    
-    public int penalty(int sum){
-    	
 
+
+   Roll roll = new Roll();    
+
+   int penaltysum;
+   
+   public int penalty(int sum){
+       
         if (sum <0 && sum<= 10) {
         	return buyShotAndBeer();
         } else if (sum >=11 && sum<= 20) {

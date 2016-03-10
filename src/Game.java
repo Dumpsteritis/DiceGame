@@ -1,19 +1,15 @@
 import java.util.Scanner;
-
 public class Game {
     Roll roll = new Roll();
     int Players;
     int money=100;
-	int tolerance=100;
-
+    int tolerance=100;
     Scanner keyboard = new Scanner(System.in);
-
     int playerNumber;
     int humanPlayerNumber;
     int AIPlayerNumber;
     boolean loseGame = false;
     int playersum;
-
     public void Explanation() {
         System.out.println("Welcome to the drinking game!");
         System.out.println("Each player starts with 100 Tolerance points and 100 Money points");
@@ -27,27 +23,21 @@ public class Game {
         System.out.println("Also, if you run out of Tolerance or Money, the game is over for you");
         System.out.println("The last player who has 20 or more combined Tolerance and Money points, while having \n"
                 + "enough Tolerance and Money for another drink, wins");
-
     }
-
     public int humanPlayerNumber(){
         System.out.println("Enter the number of Human Players");
         System.out.print("> ");
         Scanner playerInput = new Scanner(System.in);
         humanPlayerNumber = playerInput.nextInt();
-
         return humanPlayerNumber;
     }
-
     public int AIPlayerNumber() {
         System.out.println("Enter the number of AI Players");
         System.out.print("> ");
         Scanner playerInput = new Scanner(System.in);
         AIPlayerNumber = playerInput.nextInt();
-
         return AIPlayerNumber;
     }
-
     public int SumofPlayers() {
         int playersum;
         playersum = (humanPlayerNumber + AIPlayerNumber);
@@ -58,40 +48,35 @@ public class Game {
         
         return playersum;
     }
-
     public void playerNumber() {
         playerNumber = (humanPlayerNumber + AIPlayerNumber);
         for (int i = 1; i < playerNumber; i++)
         {
-        	int [] playerNumber={i};
-        	for(int eachPlayer:playerNumber){
-        		  Rules rules = new Rules();
+            int [] playerNumber={i};
+            for(int eachPlayer:playerNumber){
+                  Rules rules = new Rules();
                   rules.penalty(roll.roll());
-        	}
+            }
         }
       }
-
     public void Start() {
         String go;
-
         System.out.println(" ");
         System.out.println("Ready to roll the dice? (Yes/No)");
         System.out.print("> ");
         go = keyboard.nextLine();
-
         if (go.equalsIgnoreCase("Yes")) {
             
-
         } else {
             System.out.println
             ("Unless you type in 'Yes', we're not going anywhere. Please restart this game");
         }
             Rules rules = new Rules();
             rules.penalty(roll.roll());
-    		Player[] player = new Player[10];
-    		for (int i =0; i<playerNumber; i++){
-    			player[i] = new Player();
-    		}
+            Player[] player = new Player[10];
+            for (int i =0; i<playerNumber; i++){
+                player[i] = new Player();
+            }
        }
     
     
@@ -104,7 +89,6 @@ public class Game {
         System.out.println("Remaining Money: " + money );
         return tolerance;
     }
-
     public int drinkShot() {
         tolerance -= 10;
         System.out.println("You took a shot and lost 10 Tolerance");
@@ -122,7 +106,6 @@ public class Game {
         System.out.print("> ");
         System.out.println("Remaining Money: " + money );
         return tolerance;}
-
     public int buyBeer() {
         money -= 4;
         System.out.println("You bought a beer and lost 4 Money");
@@ -132,7 +115,6 @@ public class Game {
         System.out.println("Remaining Tolerance: " + tolerance);
         return money;
     }
-
     public int buyShot() {
         money -= 5;
         System.out.println("You bought a shot and lost 5 Money");
@@ -151,7 +133,6 @@ public class Game {
         System.out.println("Remaining Tolerance: " + tolerance);
         return money;
     }
-
     public void loseGame() {
         if ((money + tolerance) <= 20) {
             loseGame = true;
@@ -163,15 +144,12 @@ public class Game {
             loseGame = true;
             System.out.println("Hey drunkie...Go home.");
         }else {
-        	
+            
         }
     }
-
     public void playerTurn() {
         while ((humanPlayerNumber + AIPlayerNumber) >= 2) {
             playerNumber++;
         }
     }
-
-
 }
