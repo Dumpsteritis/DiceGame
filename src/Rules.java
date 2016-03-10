@@ -9,8 +9,7 @@ public class Rules extends Game
     	
 
         if (sum <0 && sum<= 10) {
-        	return buyBeer();
-            return buyShot();
+        	return buyShotAndBeer();
         } else if (sum >=11 && sum<= 20) {
             return drinkShot();
         } else if (sum >=21 && sum<= 30) {
@@ -20,8 +19,8 @@ public class Rules extends Game
         } else if (sum >=41 && sum<= 50) {
             return drinkBeer();
         } else if (sum >=51 && sum<= 60) {
-            return drinkShot();
-            return drinkBeer();
+            return drinkShotAndBeer();
+            
         }
 		return penaltysum;
         

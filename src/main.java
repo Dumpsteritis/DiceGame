@@ -1,5 +1,5 @@
 
-public class main {
+public class main extends Game{
 
 	public static void main(String[] args) 
 	{
@@ -8,7 +8,7 @@ public class main {
 		Game Start = new Game();
 		
 		Start.Explanation();
-		Start.humanPlayerNumber();
+		Start.humanPlayerNumber(null, 0, 0);
 		Start.AIPlayerNumber();
 		Start.SumofPlayers();
 		Start.Start();

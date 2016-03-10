@@ -1,8 +1,10 @@
 import java.util.Scanner;
 
-public class Game extends Player {
+public class Game {
     Roll roll = new Roll();
-
+    int Players;
+    int money;
+	int tolerance;
 
     Scanner keyboard = new Scanner(System.in);
 
@@ -28,7 +30,7 @@ public class Game extends Player {
 
     }
 
-    public int humanPlayerNumber() {
+    public int humanPlayerNumber(String playerName, int money, int tolerance) {
         System.out.println("Enter the number of Human Players");
         System.out.print("> ");
         Scanner playerInput = new Scanner(System.in);
@@ -59,7 +61,11 @@ public class Game extends Player {
         playerNumber = (humanPlayerNumber + AIPlayerNumber);
         for (int i = 1; i < playerNumber; i++)
         {
-        	System.out.println("iiiiiii");
+        	int [] playerNumber={i};
+        	for(int eachPlayer:playerNumber){
+        		  Rules rules = new Rules();
+                  rules.penalty(roll.roll());
+        	}
         }
       }
 
@@ -80,13 +86,16 @@ public class Game extends Player {
         }
             Rules rules = new Rules();
             rules.penalty(roll.roll());
-
+    		Player[] player = new Player[10];
+    		for (int i =0; i<playerNumber; i++){
+    			player[i] = new Player();
+    		}
        }
     
     
     public int drinkBeer() {
         tolerance -= 8;
-        System.out.println("You also drank a beer and lost 8 Tolerance");
+        System.out.println("You drank a beer and lost 8 Tolerance");
         System.out.print("> ");
         System.out.println("Remaining Tolerance: " + tolerance);
         System.out.print("> ");
@@ -96,7 +105,16 @@ public class Game extends Player {
 
     public int drinkShot() {
         tolerance -= 10;
-        System.out.println("You also took a shot and lost 10 Tolerance");
+        System.out.println("You took a shot and lost 10 Tolerance");
+        System.out.print("> ");
+        System.out.println("Remaining Tolerance: " + tolerance);
+        System.out.print("> ");
+        System.out.println("Remaining Money: " + money );
+        return tolerance;}
+    
+    public int drinkShotAndBeer() {
+        tolerance -= 18;
+        System.out.println("You took a shot and drank a beeer, losing 18 Tolerance");
         System.out.print("> ");
         System.out.println("Remaining Tolerance: " + tolerance);
         System.out.print("> ");
@@ -115,7 +133,16 @@ public class Game extends Player {
 
     public int buyShot() {
         money -= 5;
-        System.out.println("You also bought a shot and lost 5 Money");
+        System.out.println("You bought a shot and lost 5 Money");
+        System.out.print("> ");
+        System.out.println("Remaining Money: " + money);
+        System.out.print("> ");
+        System.out.println("Remaining Tolerance: " + tolerance);
+        return money;
+    }
+    public int buyShotAndBeer() {
+        money -= 5;
+        System.out.println("You bought a shot and a beer, and lost 9 Money");
         System.out.print("> ");
         System.out.println("Remaining Money: " + money);
         System.out.print("> ");
