@@ -1,5 +1,5 @@
 
-public class main {
+public class main extends Game{
 
 	public static void main(String[] args) 
 	{
