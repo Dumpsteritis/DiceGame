@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Player {
-	String playerName;
+	
 	int money;
 	int tolerance;
 
