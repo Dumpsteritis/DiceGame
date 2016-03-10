@@ -1,6 +1,12 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+
 public class Game {
-    Roll roll = new Roll();
+    
+	Player Player = new Player();
+	Roll roll = new Roll();
+    
     int Players;
     int money=100;
     int tolerance=100;
@@ -10,6 +16,7 @@ public class Game {
     int AIPlayerNumber;
     boolean loseGame = false;
     int playersum;
+    
     public void Explanation() {
         System.out.println("Welcome to the drinking game!");
         System.out.println("Each player starts with 100 Tolerance points and 100 Money points");
@@ -24,6 +31,9 @@ public class Game {
         System.out.println("The last player who has 20 or more combined Tolerance and Money points, while having \n"
                 + "enough Tolerance and Money for another drink, wins");
     }
+    
+
+    
     public int humanPlayerNumber(){
         System.out.println("Enter the number of Human Players");
         System.out.print("> ");
@@ -149,7 +159,62 @@ public class Game {
     }
     public void playerTurn() {
         while ((humanPlayerNumber + AIPlayerNumber) >= 2) {
-            playerNumber++;
+            playerNumber++;}
         }
+
     }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
