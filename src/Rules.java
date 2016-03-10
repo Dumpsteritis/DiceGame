@@ -1,6 +1,7 @@
 
 public class Rules extends Game
 {    
+
    Roll roll = new Roll();    
 
    int penaltysum;
@@ -26,4 +27,5 @@ public class Rules extends Game
         return penaltysum;
        
    }
+
 }
