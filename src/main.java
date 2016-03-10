@@ -8,7 +8,7 @@ public class main extends Game{
 		Game Start = new Game();
 		
 		Start.Explanation();
-		Start.humanPlayerNumber(null, 0, 0);
+		Start.humanPlayerNumber();
 		Start.AIPlayerNumber();
 		Start.SumofPlayers();
 		Start.Start();

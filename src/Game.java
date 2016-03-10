@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Game {
     Roll roll = new Roll();
     int Players;
-    int money;
-	int tolerance;
+    int money=100;
+	int tolerance=100;
 
     Scanner keyboard = new Scanner(System.in);
 
@@ -30,7 +30,7 @@ public class Game {
 
     }
 
-    public int humanPlayerNumber(String playerName, int money, int tolerance) {
+    public int humanPlayerNumber(){
         System.out.println("Enter the number of Human Players");
         System.out.print("> ");
         Scanner playerInput = new Scanner(System.in);
@@ -54,6 +54,8 @@ public class Game {
         System.out.println("Number of total players is: ");
         System.out.print("> ");
         System.out.print(playersum);
+        playerNumber();
+        loseGame();
         return playersum;
     }
 
@@ -160,6 +162,8 @@ public class Game {
         } else if (tolerance <= 7) {
             loseGame = true;
             System.out.println("Hey drunkie...Go home.");
+        }else {
+        	
         }
     }
 
