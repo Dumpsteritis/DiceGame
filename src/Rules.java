@@ -1,28 +1,29 @@
 
 public class Rules extends Game
 {    
-    Roll roll = new Roll();    
- 
-    
-    
-    public void penalty(int sum){
-    	
+   Roll roll = new Roll();    
 
-        if (sum <= 10) {
-            buyBeer();
-            buyShot();
-        } else if (sum <= 20) {
-            drinkShot();
-        } else if (sum <= 30) {
-            buyBeer();
-        } else if (sum <= 40) {
-            buyShot();
-        } else if (sum <= 50) {
-            drinkBeer();
-        } else if (sum <= 60) {
-            drinkShot();
-            drinkBeer();
-        }
-        
-    }
+   int penaltysum;
+   
+   public int penalty(int sum){
+       
+
+       if (sum <0 && sum<= 10) {
+           return buyBeer();
+           return buyShot();
+       } else if (sum >=11 && sum<= 20) {
+           return drinkShot();
+       } else if (sum >=21 && sum<= 30) {
+           return buyBeer();
+       } else if (sum >=31 && sum<= 40) {
+           return buyShot();
+       } else if (sum >=41 && sum<= 50) {
+           return drinkBeer();
+       } else if (sum >=51 && sum<= 60) {
+           return drinkShot();
+           return drinkBeer();
+       }
+        return penaltysum;
+       
+   }
 }

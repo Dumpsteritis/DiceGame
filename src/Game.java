@@ -11,7 +11,7 @@ public class Game extends Player {
     int AIPlayerNumber;
     boolean loseGame = false;
     int playersum;
-
+    Player[] players;
     public void Explanation() {
         System.out.println("Welcome to the drinking game!");
         System.out.println("Each player starts with 100 Tolerance points and 100 Money points");
@@ -33,7 +33,6 @@ public class Game extends Player {
         System.out.print("> ");
         Scanner playerInput = new Scanner(System.in);
         humanPlayerNumber = playerInput.nextInt();
-
         return humanPlayerNumber;
     }
 
@@ -46,6 +45,14 @@ public class Game extends Player {
         return AIPlayerNumber;
     }
 
+ public void makePlayerList()
+ {
+	 players = new Player[playersum];
+	 for (int i = 0 ; i < players.length; i++){
+		 players[i] = new Player();
+	 }
+ }
+    
     public int SumofPlayers() {
         int playersum;
         playersum = (humanPlayerNumber + AIPlayerNumber);
@@ -57,9 +64,12 @@ public class Game extends Player {
 
     public void playerNumber() {
         playerNumber = (humanPlayerNumber + AIPlayerNumber);
+        
+        
         for (int i = 1; i < playerNumber; i++)
         {
-        	System.out.println("iiiiiii");
+            Rules rules = new Rules();
+            players[i].tolerance += rules.penalty(roll.roll());
         }
       }
 
@@ -91,7 +101,7 @@ public class Game extends Player {
         System.out.println("Remaining Tolerance: " + tolerance);
         System.out.print("> ");
         System.out.println("Remaining Money: " + money );
-        return tolerance;
+        return -8;
     }
 
     public int drinkShot() {
