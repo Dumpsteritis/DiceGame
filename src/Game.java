@@ -55,7 +55,7 @@ public class Game {
         System.out.print("> ");
         System.out.print(playersum);
         playerNumber();
-        loseGame();
+        
         return playersum;
     }
     public void playerNumber() {
@@ -118,7 +118,7 @@ public class Game {
         return tolerance;}
     public int buyBeer() {
         money -= 4;
-        System.out.println("You also bought a beer and lost 4 Money");
+        System.out.println("You bought a beer and lost 4 Money");
         System.out.print("> ");
         System.out.println("Remaining Money: " + money );
         System.out.print("> ");
